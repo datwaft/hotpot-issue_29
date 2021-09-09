@@ -436,7 +436,7 @@ Additionally you can use `conj' and `apply' with
                     (each [_ b (_G.utf8.codes col)]
                       (insert res (char b)))
                     res)
-                  (do (io.stderr:write
+                  (do (_G.io.stderr:write
                        "WARNING: utf8 module unavailable, seq function will not work for non-unicode strings\n")
                       (each [b (col:gmatch ".")]
                         (insert res b))
@@ -459,7 +459,7 @@ Additionally you can use `conj' and `apply' with
                     (each [i b (_G.utf8.codes col)]
                       (insert res [i (char b)]))
                     res)
-                  (do (io.stderr:write
+                  (do (_G.io.stderr:write
                        "WARNING: utf8 module unavailable, seq function will not work for non-unicode strings\n")
                       (for [i 1 (length col)]
                         (insert res [i (col:sub i i)]))

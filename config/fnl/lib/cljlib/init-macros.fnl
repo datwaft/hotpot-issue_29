@@ -126,7 +126,7 @@
                    (insert# res# (char# b#)))
                  res#)
                (do
-                 (io.stderr:write "WARNING: utf8 module unavailable, seq function will not work for non-unicode strings\n")
+                 (_G.io.stderr:write "WARNING: utf8 module unavailable, seq function will not work for non-unicode strings\n")
                  (each [b# (col#:gmatch ".")]
                    (insert# res# b#))
                  res#))
